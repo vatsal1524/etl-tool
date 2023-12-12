@@ -16,7 +16,7 @@ public class Main {
         mongoLogger.setLevel(java.util.logging.Level.OFF);
 
         // API key to access https://newsapi.org
-        String apiKey = "d9ec6a7ee873489c84ef3ca88c86ac20";
+        String apiKey = "API_KEY_HERE";
 
         // List of keywords to retrieve news articles
         String[] keywords = new String[]{"Canada", "University", "Dalhousie", "Halifax", "Canada Education", "Moncton",
@@ -37,7 +37,7 @@ public class Main {
             Processor.process(keyword, apiResponseList);
 
             // Establishing a connection to a MongoDB cluster using the MongoDB Java driver
-            ConnectionString connectionString = new ConnectionString("mongodb+srv://vatsal1524:vatsal1524@cluster0.t3vbr6h.mongodb.net/?retryWrites=true&w=majority");
+            ConnectionString connectionString = new ConnectionString("MONGO_DB_CONNECTION_STRING");
             MongoClientSettings settings = MongoClientSettings.builder()
                     .applyConnectionString(connectionString)
                     .build();
